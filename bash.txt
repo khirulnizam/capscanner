@@ -1,0 +1,3 @@
+#bash.txt
+npm install @capacitor-community/barcode-scanner
+npx cap sync
