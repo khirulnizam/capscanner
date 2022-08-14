@@ -1,0 +1,34 @@
+#bash.txt
+npm install @capacitor-community/barcode-scanner
+npm install @capacitor/android
+ionic cap add android
+ionic cap sync
+
+
+# Sifu Razman
+# https://javascript.plainenglish.io/how-to-build-an-ionic-angular-capacitor-app-with-a-qr-code-scanner-28d6356809af
+
+For Android:
+
+ionic build
+npm install @capacitor/android
+
+npx cap copy android
+
+npx cap sync android
+
+ionic cap run
+# npx cap open android
+
+
+#display HTML data
+<!--
+  <ion-card>
+    <ion-card-content>
+      All data: {{resultcontent}}<br>
+      No KP: {{nokp}} <br>
+      Nama: {{nama}} <br>
+      Gaji: {{pendapatan}} <br>
+    </ion-card-content>
+  </ion-card>
+-->

@@ -9,6 +9,8 @@ import { FormGroup, FormBuilder } from "@angular/forms";
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+
 export class HomePage {
   scanActive: boolean = false;
 
@@ -82,67 +84,5 @@ export class HomePage {
     BarcodeScanner.stopScan();
     this.scanActive = false;
   }
-}
+}//end class HomePage
 
-/*
-const prepare = () => {
-  BarcodeScanner.prepare();
-};
-
-const startScan = async () => {
-  alert("trying to scan");
-  BarcodeScanner.hideBackground();
-  const result = await BarcodeScanner.startScan();
-  if (result.hasContent) {
-    console.log(result.content);
-  }
-};
-
-const stopScan = () => {
-  BarcodeScanner.showBackground();
-  BarcodeScanner.stopScan();
-};
-
-const askUser = () => {
-  prepare();
-
-  const c = confirm('Do you want to scan a barcode?');
-
-  if (c) {
-    startScan();
-    
-  } else {
-    stopScan();
-  }
-};
-
-const checkPermission = async () => {
-  // check or request permission
-  const status = await BarcodeScanner.checkPermission({ force: true });
-
-  if (status.granted) {
-    // the user granted permission
-    return true;
-  }
-
-  return false;
-};
-
-
-
-@Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-})
-export class HomePage {
-
-  constructor() {}
-
-  scancode(){
-    checkPermission();
-    askUser();
-  }
-
-}
-*/
